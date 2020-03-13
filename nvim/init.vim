@@ -17,7 +17,8 @@ filetype indent plugin on
  
 " Enable syntax highlighting
 syntax on
- 
+
+set termguicolors
  
 "------------------------------------------------------------
 " Must have options {{{1
@@ -125,6 +126,7 @@ set noshowmode
 
 set encoding=utf-8
 
+set linespace=3
 " highlight cursor position
 set cursorline
 " set cursorcolumn
@@ -159,8 +161,8 @@ set title
 "
 call plug#begin(stdpath('data') . '/plugged')
 
+Plug 'rainglow/vim'
 Plug 'itchyny/lightline.vim'
-Plug 'rakr/vim-one'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
@@ -170,9 +172,10 @@ call plug#end()
 "------------------------------------------------------------
 " Plugin configuration
 "
-colorscheme one
 let g:one_allow_italics = 1
 set background=dark
+
+colorscheme allure-contrast
 
 let g:lightline = {
       \ 'colorscheme': 'one',
