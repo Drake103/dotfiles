@@ -164,7 +164,9 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'rainglow/vim'
 Plug 'itchyny/lightline.vim'
 
+Plug 'davidhalter/jedi-vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'deoplete-plugins/deoplete-jedi'
 
 call plug#end()
 "------------------------------------------------------------
@@ -175,7 +177,7 @@ call plug#end()
 let g:one_allow_italics = 1
 set background=dark
 
-colorscheme allure-contrast
+"colorscheme allure-contrast
 
 let g:lightline = {
       \ 'colorscheme': 'one',
@@ -183,3 +185,5 @@ let g:lightline = {
 
 let g:deoplete#enable_at_startup = 1
 "------------------------------------------------------------
+
+au VimLeave * set guicursor=a:block-blinkon200-blinkoff200-blinkwait200
