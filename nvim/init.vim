@@ -161,7 +161,6 @@ set title
 "
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'rainglow/vim'
 Plug 'itchyny/lightline.vim'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -174,8 +173,6 @@ call plug#end()
 "
 let g:one_allow_italics = 1
 set background=dark
-
-colorscheme allure-contrast
 
 let g:lightline = {
       \ 'colorscheme': 'one',
